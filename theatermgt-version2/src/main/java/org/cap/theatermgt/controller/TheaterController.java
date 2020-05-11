@@ -78,7 +78,7 @@ public class TheaterController {
 	}
 
 	@ExceptionHandler(TheaterNotFoundException.class)
-	public ResponseEntity<String> handleCustomerNotFound(TheaterNotFoundException ex) {
+	public ResponseEntity<String> handleTheaterNotFound(TheaterNotFoundException ex) {
 		Log.error("handleTheaterNotFound()", ex);
 		String msg = ex.getMessage();
 		ResponseEntity<String> response = new ResponseEntity<>(msg, HttpStatus.NOT_FOUND);
